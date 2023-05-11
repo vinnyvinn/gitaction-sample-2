@@ -39,7 +39,7 @@ jobs:
 #            package.json
 
   deploy:
-    need: build
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Get Build Artifacts
