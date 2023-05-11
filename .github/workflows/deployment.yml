@@ -39,9 +39,10 @@ jobs:
 #            package.json
 
   deploy:
+    need: build
     runs-on: ubuntu-latest
     steps:
-      - name: Download Artifacts
+      - name: Get Build Artifacts
         uses: actions/download-artifact@v3
         with:
           name: dist-files
